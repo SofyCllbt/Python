@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios Jinja</title>
+</head>
+<body>
+
+    <h1>Resolução dos Exercícios de Jinja</h1>
+
+    <!-- 1 - Crie um template que exiba a mensagem: "Olá, {{ nome }}". -->
+    <div class="exercicio">
+        <p><span class="num">1.</span> Olá, {{ nome }}</p>
+    </div>
+
+    <!-- 2 - Mostre nome e idade. -->
+    <div class="exercicio">
+        <p><span class="num">2.</span> Nome: {{ nome }}</p>
+        <p>Idade: {{ idade }} anos</p>
+    </div>
+
+    <!-- 3 - Dado usuario = {"nome": "Ana", "email": "ana@email.com"}, exiba os dados. -->
+    <div class="exercicio">
+        <p><span class="num">3.</span> <strong>Dados do Usuário:</strong></p>
+        <p>Nome: {{ usuario.nome }}</p>
+        <p>Email: {{ usuario.email }}</p>
+    </div>
+
+    <!-- 4 - Liste nomes de alunos. -->
+    <div class="exercicio">
+        <p><span class="num">4.</span> <strong>Lista de Alunos:</strong></p>
+        <ul>
+            {% for aluno in alunos %}
+                <li>{{ aluno }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- 5 - Se a nota for maior ou igual a 7, mostre "Aprovado", caso contrário, "Reprovado". -->
+    <div class="exercicio">
+        <p><span class="num">5.</span> Nota do aluno: <strong>{{ nota }}</strong></p>
+        <p>Status: 
+            {% if nota >= 7 %}
+                <span class="badge aprovado">Aprovado</span>
+            {% else %}
+                <span class="badge reprovado">Reprovado</span>
+            {% endif %}
+        </p>
+    </div>
+
+</body>
+</html>
